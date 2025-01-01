@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffffff, #f1f1f1); /* Change red background to white */
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 2px solid #FF0000;
+        }
+        .header {
+            background-color: #FF0000;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid #cc0000;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .content .highlight {
+            font-weight: bold;
+            color: #FF0000;
+        }
+        a.button {
+            display: inline-block;
+            background-color: #FF0000;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        a.button:hover {
+            background-color: #cc0000;
+            transform: translateY(-2px);
+        }
+        button {
+            background-color: #FF0000;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #cc0000;
+            transform: translateY(-2px);
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            background-color: #f9f9f9;
+            border-radius: 0 0 12px 12px;
+        }
+        .hidden-content h2 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        .hidden-content a {
+            color: #FF0000;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hidden-content a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            background: #FF0000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .lock-icon {
+            font-size: 48px;
+            color: #FF0000;
+            margin-bottom: 20px;
+        }
+        .lock-message {
+            font-size: 18px;
+            color: #FF0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            Sblocca il Contenuto
+        </div>
+        <div class="content">
+            <div id="lock-container">
+                <p class="lock-message">Il contenuto è bloccato fino a quando non completi l'azione di iscrizione e mettere "Mi piace" al video.</p>
+                <div class="lock-icon">🔒</div>
+            </div>
+            <p>Per accedere al contenuto esclusivo, <span class="highlight">iscriviti</span> al mio canale YouTube <span class="highlight">@ionut.ilarion</span> e metti "Mi piace" al video!</p>
+            <p><a class="button" href="https://www.youtube.com/@ionut.ilarion" target="_blank">Vai al Canale YouTube</a></p>
+            <button id="confirm-button">Ho completato l'azione</button>
+
+            <div class="hidden-content" id="hidden-content">
+                <h2>Accesso sbloccato!</h2>
+                <p>Ecco il link al contenuto esclusivo:</p>
+                <a href="https://flaviusilarion.github.io/res1/" target="_blank">Accedi al Contenuto</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Grazie per il supporto! ❤️
+    </div>
+
+    <script>
+        document.getElementById("confirm-button").addEventListener("click", function() {
+            // Check if the user has completed the action
+            const lockContainer = document.getElementById("lock-container");
+            const hiddenContent = document.getElementById("hidden-content");
+
+            // Hide lock and show content once the action is completed
+            lockContainer.style.display = "none";
+            hiddenContent.style.display = "block";
+        });
+    </script>
+</body>
+</html>
